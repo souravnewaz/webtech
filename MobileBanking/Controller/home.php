@@ -21,8 +21,8 @@
     if($resultCheck>0){
         while($row = mysqli_fetch_assoc($result)){
             //echo "Your current balance: ", $row['balance'];
-            $balance = $row['balance'];
-            echo "Your current balance: ", $balance;
+            (int)$balance = $row['balance'];
+            echo "Your  balance: ", $balance;
         }
     }
 ?>
@@ -34,6 +34,12 @@
 
 <?php
         if(isset($_POST['submit'])){
+            $amount = $_POST['amount'];
+            (int)$amount;
+            (int)$new= $balance-$amount;
+            echo"Your new balance is: ", $new;
+            $sql="update user set balance = '$new'  WHERE name='$name' ; ";
+            $result = mysqli_query($conn,$sql);
             
 
             
