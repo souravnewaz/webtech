@@ -1,5 +1,6 @@
 <?php
-    include_once '../Database/db.php';
+    #include_once '../Model/db.php';
+    require '../Database/db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,20 +22,20 @@
         if(isset($_POST['submit'])){
             $name = $_POST['name'];
             $password= $_POST['password'];
-
-            $sql = "Select * from user where name = '$name' and password='$password'";
-            $result = mysqli_query($conn,$sql);
-            if(mysqli_num_rows($result)){
-                session_start();
-            $_SESSION['name']= htmlentities( $_POST['name']);
-            //$_SESSION['pa']= htmlentities( $_POST['email']);
+            if (login($name,$password)==1)
+            {
                 echo "Login successful";
+                session_start();
+                $_SESSION['name']= htmlentities( $_POST['name']);
                 header('Location: ../Controller/home.php');
             }
-            else
-            {
-                echo "Login failed!";
+            else{
+                echo "login failed";
             }
+            
+
+            
+            
         }
     ?>
 </body>
