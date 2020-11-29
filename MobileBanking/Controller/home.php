@@ -21,7 +21,7 @@
 
 <form method="POST" action="#">
     <input type="text" name="amount" placeholder="enter amount..">
-    <input type="submit" name="submit" value="Deposit">
+    <input type="submit" name="submit" value="Withdraw">
     <input type="submit" name="logout" value="logout">
 </form>
 
