@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <script>
+			function validate() {
+				var id = document.getElementById('id').value;
+				var username = document.getElementById('username').value;
+				var email = document.getElementById('email').value;
+				var dob = document.getElementById('dob').value;
+				var password = document.getElementById('password').value;
+				// console.log(x);
+				if(id == "") {
+					document.getElementById('errorMsg').innerHTML = "Id is empty";
+					document.getElementById('errorMsg').style.color = "red";
+					return false;	
+                }
+                else if(username == ""){
+                    document.getElementById('errorMsg').innerHTML = "Name is empty";
+                    document.getElementById('errorMsg').style.color = "red";
+					return false;	
+                }
+                else if(email == ""){
+                    document.getElementById('errorMsg').innerHTML = "Email is empty";
+                    document.getElementById('errorMsg').style.color = "red";
+					return false;	
+                }
+                else if(dob == ""){
+                    document.getElementById('errorMsg').innerHTML = "DOB is empty";
+                    document.getElementById('errorMsg').style.color = "red";
+					return false;	
+                }
+                else if(password == ""){
+                    document.getElementById('errorMsg').innerHTML = "Password is empty";
+                    document.getElementById('errorMsg').style.color = "red";
+					return false;	
+                }
+                
+                    return true;
+                
+				
+			}
+		</script>
+</head>
+<body>
+    <h1>Enter Your Information</h1>
+    <form action="Controller/validation.php" method="POST" onsubmit="return validate()">
+        Id <input type="text" name="id" id="id" placeholder="id..."> <br> <br>
+        Username <input type="text" name="username" id="username" placeholder="username..."> <br> <br>
+        Email <input type="text" name="email" id="email" placeholder="enter a valid email..."> <br> <br>
+        Date of Birth <input type="date" name="dob" id="dob" > <br> <br>
+        Password <input type="text" name="password" id="password" placeholder="enter a password..."> <br> <br>
+        <input type="submit" name="submit" value="Sign up">
+    </form>
+    <p id="errorMsg"></p>
+
+    
+    
+    
+
+
+
+    
+    
+</body>
+</html>
+
+
