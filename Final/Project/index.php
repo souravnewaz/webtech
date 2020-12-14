@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+  <link rel="stylesheet" href="View/CSS/layout.css">
+  </head>
 <style>
 a:link, a:visited {
   background-color: #273746;
@@ -16,13 +19,13 @@ a:hover, a:active {
 </style>
 
     <title>Welcome</title> 
-    <?php include('Template/layout.php')?>
+    
 
 <body >
  
 <div class="container">
  <header > <h1>Dhaka Airlines </h1> </header>
-<!-- <header> <a href="index.php" style="color: white; text-decoration: none;"><h1>Dhaka Airlines</h1></a> </header>  -->
+
 <main class="content">
     <a href="Control/login.php">Login</a>
     <a href="Control/signup.php">Signup</a>

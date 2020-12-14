@@ -1,11 +1,13 @@
-<?php include('../Include/dbconnection.php')?>
+<?php #include('../Include/dbconnection.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../View/CSS/layout.css">
+    
     <title>Add Booking | Admin CS</title>
-    <?php include('../Template/layout.php')?>
+    
 </head>
 <body>
 <div class="container">
