@@ -1,3 +1,8 @@
+<?php
+session_start();
+$name= $_SESSION['name'];
+$password= $_SESSION['password'];
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,36 +27,14 @@
     <a href="../index.php">Logout</a><br><br>
     <input type="text"> <input type="submit" value="Search"><br><br>
 
-    <table>
-        <tr>
-            <th>Passenger Id</th>
-            <th>Name</th>
-            <th>Phone No</th>
-            <th>Flight Id</th>
-        </tr>
-        <tr>
-            <td>P001</td>
-            <td>Sourav</td>
-            <td>019</td>
-            <td>F001</td>
-        </tr>
-        <tr>
-            <td>P001</td>
-            <td>Sourav</td>
-            <td>019</td>
-            <td>F001</td>
-        </tr>
-        <tr>
-            <td>P001</td>
-            <td>Sourav</td>
-            <td>019</td>
-            <td>F001</td>
-        </tr>
-    </table>
+    <?php require '../Controller/passengerList.php'; ?>
   
   </main>
-  <footer>This is the footer of this webpage</footer>
+  
+  
 </div>
+
     
 </body>
+<footer>This is the footer of this webpage</footer>
 </html>

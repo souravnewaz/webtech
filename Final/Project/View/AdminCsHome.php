@@ -23,9 +23,9 @@
     <a href="flights.php">Flights</a>
     <a href="bookings.php">Bookings</a>
     <a href="passengers.php">Passengers</a>
-    <a href="../Control/seats.php">Seats</a>
-    <a href="../Control/addBooking.php">Add Bookings</a>
-    <a href="../Control/settings.php">Settings</a>
+    <a href="../Controller/seats.php">Seats</a>
+    <a href="../Controller/addBooking.php">Add Bookings</a>
+    <a href="../Controller/settings.php">Settings</a>
     <a href="../logout.php">Logout</a><br><br>
 
     <?php 

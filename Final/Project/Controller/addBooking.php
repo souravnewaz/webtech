@@ -1,4 +1,4 @@
-<?php #include('../Include/dbconnection.php')?>
+<?php #include('../Model/dbconnection.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

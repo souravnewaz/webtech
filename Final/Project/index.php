@@ -27,8 +27,8 @@ a:hover, a:active {
  <header > <h1>Dhaka Airlines </h1> </header>
 
 <main class="content">
-    <a href="Control/login.php">Login</a>
-    <a href="Control/signup.php">Signup</a>
+    <a href="View/login.php">Login</a>
+    <a href="View/signup.php">Signup</a>
 
 </main>
 <footer>This is the footer of this webpage</footer>
