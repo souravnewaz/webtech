@@ -22,7 +22,7 @@
         
     </form>
 
-    <?php require '../Controller/loginValidation.php';?>
+    <?php require '../Controller/validationLogin.php';?>
      
     </main>
 

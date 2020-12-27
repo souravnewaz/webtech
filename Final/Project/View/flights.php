@@ -21,33 +21,32 @@
     <a href="../Control/settings.php">Settings</a>
     <a href="../index.php">Logout</a><br><br>
 
-<table>
-    <tr>
-        <th>From</th>
-        <th>To</th>
-        <th>Departure</th>
-    </tr>
-    <tr>
-        <td>Dhaka</td>
-        <td>Chittagong</td>
-        <td>6:00am</td>
-    </tr>
-    <tr>
-        <td>Dhaka</td>
-        <td>Kolkata</td>
-        <td>6:00am</td>
-    </tr>
-    <tr>
-        <td>Dhaka</td>
-        <td>Nepal</td>
-        <td>6:00am</td>
-    </tr>
-    <tr>
-        <td>Dhaka</td>
-        <td>Delhi</td>
-        <td>6:00am</td>
-    </tr>
-</table>
+    <form>
+      
+        <h3> Add New Flight </h3> <br>
+         From <select name="from" id="from"> <br><br>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Chittagong">Chittagong</option>
+            <option value="Khulna">khulna</option>
+            <option value="Rajshahi">Rajshahi</option>
+            <option value="Sylhet">Sylhet</option>
+         </select>
+         To <select name="to" id="to">            
+            <option value="Dubai">Dubai</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Kualalampur">Kualalampur</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Kathmandu">Kathmandu</option>
+         </select> <br><br>
+         
+         Date <input type="datetime-local"> <br><br>
+         
+        <input type="submit" name="submit" value="Add"> <br> <br>
+</form>
+    
+<h3> Current Flights </h3>
+<?php require '../Controller/showFlights.php'; ?>
+    </table>
   
   </main>
   <footer>This is the footer of this webpage</footer>

@@ -28,7 +28,7 @@ Confirm Password: <input type="password" name="password" id="password2"><br><br>
     
 </form>
     Alredy registered? <a href="login.php">Login</a> <br><br>
-    <?php require '../Controller/signupValidation.php';?>
+    <?php require '../Controller/validationSignup.php';?>
     
     
     </main>

@@ -4,7 +4,7 @@ $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
 $dbName = "airline";
-$id;
+
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
@@ -39,10 +39,10 @@ function signup ($name,$email,$phone,$gender,$password){
      
 }
 
-function PassengerList($name,$password){
+function passengers(){
     global $conn;
-    global $id;
-    $sql = "SELECT `id`, `name`, `email`, `phone`, `gender`, `address` FROM `user` WHERE `name` = '$name' and password = '$password'";
+     
+    $sql = "SELECT `id`, `name`, `email`, `phone`, `gender`, `address` FROM `user` ";
     $result = mysqli_query($conn,$sql);
 
     echo '<table border="1" cellspacing="2" cellpadding="2">
@@ -81,5 +81,91 @@ function PassengerList($name,$password){
 
     }
 }
+
+function flights(){
+    global $conn;
+    $sql = "SELECT * FROM flight";
+    $result = mysqli_query($conn,$sql);
+    echo '<table border="1" cellspacing="2" cellpadding="2" >
+        <tr>
+            <th>Id</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Date</th>
+            <th>Time</th>
+            
+            </tr>';
+    while($row = mysqli_fetch_array($result)){
+        $id = $row['id'];
+        $takeoff = $row['takeoff'];
+        $landing = $row['landing'];
+        $date = $row['date'];
+        $time = $row['time'];
+        echo '
+        <tr>
+            <td>'.$id.'</td>
+            <td>'.$takeoff.'</td>
+            <td>'.$landing.'</td>
+            <td>'.$date.'</td>
+            <td>'.$time.'</td>
+            
+            
+            </tr>
+            ';
+    }
+}
+
+
+function bookings(){
+    global $conn;
+    $sql = "select * FROM booking";
+    $result = mysqli_query($conn, $sql);
+    echo '<table border="1" cellspacing="2" cellpadding="2" >
+        <tr>
+            <th>Booking Id</th>
+            <th>User Id</th>
+            <th>Flight Id</th>
+            <th>Seat Id</th>
+            <th>Luggage Id</th>
+            <th>Status</th>
+            
+            
+            </tr>';
+    while($row = mysqli_fetch_array($result)){
+        echo "<tr>";
+                echo "<td>". $row['id']. "</td>";
+                echo "<td>". $row['userId']. "</td>";
+                echo "<td>". $row['flightId']. "</td>";
+                echo "<td>". $row['seatId']. "</td>";
+                echo "<td>". $row['luggageId']. "</td>";
+                echo "<td>". $row['status']. "</td>";
+
+                echo "<td>"; echo "<a href='../Controller/bookingApprove.php?id=" . $row['id'] . "'>"; echo "Approve"; echo "</a>"; echo "</td>";
+                echo "<td>"; echo "<a href='../Controller/bookingReject.php?id=" . $row['id'] . "'>"; echo "Reject"; echo "</a>"; echo "</td>";
+                
+                 
+                
+                echo "</tr>";
+                
+
+    }
+    echo "</table>";
+
+}
+
+function BookingApprove($id){
+    global $conn;
+    $sql = "UPDATE booking SET status='Approved' WHERE id= $id";
+    $result = mysqli_query($conn, $sql);
+
+}
+
+function BookingReject($id){
+    global $conn;
+    $sql = "UPDATE booking SET status='REJECTED' WHERE id= $id";
+    $result = mysqli_query($conn, $sql);
+}
+
+
 
 

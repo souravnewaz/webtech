@@ -16,45 +16,16 @@
     <a href="flights.php">Flights</a>
     <a href="bookings.php">Bookings</a>
     <a href="passengers.php">Passengers</a>
-    <a href="../control/seats.php">Seats</a>
-    <a href="../Control/addBooking.php">Add Bookings</a>
-    <a href="../Control/settings.php">Settings</a>
+    <a href="../controller/seats.php">Seats</a>
+    <a href="../Controller/addBooking.php">Add Bookings</a>
+    <a href="../Controller/settings.php">Settings</a>
     <a href="../index.php">Logout</a><br><br>
     
 
     <table>
-        <tr>
-            <th>Flight Id</th>
-            <th>Flight Route</th>
-            <th>Departure</th>
-            <th>Passenger Id</th>
-            <th>Passenger Name</th>
-            
-        </tr>
-        <tr>
-            <td>001</td>
-            <td>Dhaka-Chittagong</td>
-            <td>6:00am</td>
-            <td>P001</td>
-            <td>Sourav</td>
-            <td><Button>Approve</Button></td>
-        </tr>
-        <tr>
-            <td>001</td>
-            <td>Dhaka-Chittagong</td>
-            <td>6:00am</td>
-            <td>P001</td>
-            <td>Sourav</td>
-            <td><Button>Approve</Button></td>
-        </tr>
-        <tr>
-            <td>001</td>
-            <td>Dhaka-Chittagong</td>
-            <td>6:00am</td>
-            <td>P001</td>
-            <td>Sourav</td>
-            <td><Button>Approve</Button></td>
-        </tr>
+        <?php require '../Controller/showBookings.php';
+            #ShowBookings();
+        ?>
     </table>
   
   </main>
