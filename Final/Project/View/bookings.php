@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    $name= $_SESSION['name'];
+    if($name == ""){
+      header('location: ../View/login.php');
+      
+      
+
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,20 +27,31 @@
     <a href="flights.php">Flights</a>
     <a href="bookings.php">Bookings</a>
     <a href="passengers.php">Passengers</a>
-    <a href="../controller/seats.php">Seats</a>
-    <a href="../Controller/addBooking.php">Add Bookings</a>
-    <a href="../Controller/settings.php">Settings</a>
-    <a href="../index.php">Logout</a><br><br>
+    <a href="seats.php">Seats</a>
+    <a href="addBooking.php">Add Bookings</a>
+    <a href="../Controller/logout.php">Logout</a><br><br>
     
-
-    <table>
-        <?php require '../Controller/showBookings.php';
-            #ShowBookings();
+<h3>Pendling List</h3>
+    <table >
+        <?php require '../Controller/bookingShow.php';
+            
+        ?>
+    </table>
+    <h3>Approved List</h3>
+    <table >
+        <?php require '../Controller/bookingApprovedShow.php';
+            
+        ?>
+    </table>
+    <h3>Rejected List</h3>
+    <table >
+        <?php require '../Controller/bookingRejectedShow.php';
+            
         ?>
     </table>
   
   </main>
-  <footer>This is the footer of this webpage</footer>
+  <footer>©2021 Dhaka Airlines. All rights reserved</footer>
 </div>
     
 </body>

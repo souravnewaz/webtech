@@ -3,20 +3,7 @@
   <head>
   <link rel="stylesheet" href="View/CSS/layout.css">
   </head>
-<style>
-a:link, a:visited {
-  background-color: #273746;
-  color: white;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
 
-a:hover, a:active {
-  background-color: #ABB2B9;
-}
-</style>
 
     <title>Welcome</title> 
     
@@ -26,12 +13,12 @@ a:hover, a:active {
 <div class="container">
  <header > <h1>Dhaka Airlines </h1> </header>
 
-<main class="content">
+<main class="content" align="center">
     <a href="View/login.php">Login</a>
     <a href="View/signup.php">Signup</a>
 
 </main>
-<footer>This is the footer of this webpage</footer>
+<footer>©2021 Dhaka Airlines. All rights reserved</footer>
 </div>
 
   

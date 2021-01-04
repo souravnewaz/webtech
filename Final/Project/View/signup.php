@@ -11,16 +11,14 @@
 <div class="container">
 <header> <a href="../index.php" style="color: white; text-decoration: none;"><h1>Dhaka Airlines</h1></a> </header>  
 <main class="content">
+<h3>Sign up</h3>
 
-
-<form form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"   onsubmit="return signUpValidation()">
+<form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"   onsubmit="return signUpValidation()">
 
 Name: <input type="text" name="name" id="name"><br><br>
 Email: <input type="text" name="email" id="email"><br><br>
 Phone: <input type="text" name="phone" id="phone"><br><br>
-Gender: 
-<input type="radio" name="gender" id="gender">Male
-<input type="radio" name="gender" >Female <br><br>
+Address <input type="text" name="address" id="address"><br><br>
 Password: <input type="password" name="password" id="password1"><br><br>
 Confirm Password: <input type="password" name="password" id="password2"><br><br>
 <input type="submit" name="submit" value="Signup">
@@ -28,12 +26,12 @@ Confirm Password: <input type="password" name="password" id="password2"><br><br>
     
 </form>
     Alredy registered? <a href="login.php">Login</a> <br><br>
-    <?php require '../Controller/validationSignup.php';?>
+    <?php require '../Controller/signupValidation.php';?>
     
     
     </main>
     
-<footer>This is the footer of this webpage</footer>
+    <footer>©2021 Dhaka Airlines. All rights reserved</footer>
 </div>
 </body>
 

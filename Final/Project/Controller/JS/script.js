@@ -1,3 +1,4 @@
+
 function signUpValidation(){
     text = document.getElementById("errorMsg");
     
@@ -6,6 +7,7 @@ function signUpValidation(){
     pw2 = document.getElementById("password2");
     email = document.getElementById("email");
     phone = document.getElementById("phone");
+   
 	 
     
     if(userName.value == ""){
@@ -13,16 +15,19 @@ function signUpValidation(){
         text.style.color= "red";
         return false;
     }
+
     else if(email.value == ""){
         text.innerHTML ="Enter an email";
         text.style.color= "red";
         return false;
     }
+
     else if(phone.value == ""){
         text.innerHTML ="Enter phone no";
         text.style.color= "red";
         return false;
     }  
+   
     else if(pw1.value == ""){
         text.innerHTML ="Enter password";
         text.style.color= "red";
@@ -73,3 +78,69 @@ function loginValidation (){
     else
         return true;
 }
+
+
+function flightValidation(){
+    text = document.getElementById("errorMsg");
+    from = document.getElementById("from");
+    to = document.getElementById("to");
+    departure = document.getElementById("departure");
+        if(from.value == ""){
+        text.innerHTML = "From where?";
+        text.style.color= "red";        
+        return false;
+
+    }
+
+    if( to.value == ""){
+        text.innerHTML = "To where?";
+        text.style.color= "red";        
+        return false;
+    }
+    if( departure.value == ""){
+        text.innerHTML = "Time?";
+        text.style.color= "red";        
+        return false;
+    }
+
+    else   
+        return true;
+}
+
+
+
+function bookingValidation(){
+    text = document.getElementById("errorMsg");
+    id = document.getElementById("id");
+    
+    product = document.getElementById("product");
+    weight = document.getElementById("weight");
+    
+
+    if( id.value == ""){
+        text.innerHTML = "Passenger id please";
+        text.style.color= "red";        
+        return false;
+    }
+    
+
+    if( product.value == ""){
+        text.innerHTML = "Product name required";
+        text.style.color= "red";        
+        return false;
+    }
+    if( weight.value == ""){
+        text.innerHTML = "Product weight required";
+        text.style.color= "red";        
+        return false;
+    }
+
+    else{   
+        
+        
+        return true;
+    }
+}
+
+
+
